@@ -25,7 +25,7 @@ layout: null
       <nav class="top-nav">
         <a href="#features">What it does</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-ghost" href="{{ site.url }}/sign-in/">Sign in</a>
+        <a class="btn btn-ghost" href="{{ site.trial_url }}">Try it free</a>
       </nav>
     </div>
   </header>
@@ -41,7 +41,7 @@ layout: null
           and under your own company's name.
         </p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Book a demo</a>
+          <a class="btn btn-primary" href="{{ site.trial_url }}">Try it free</a>
           <a class="btn btn-ghost" href="#features">See what it does</a>
         </div>
       </div>
@@ -98,11 +98,11 @@ layout: null
 
     <section id="contact" class="contact">
       <div class="wrap">
-        <h2>See it on your own business</h2>
-        <p class="lead">Tell us your trade and how many people are on your team. We'll walk you through it with your own services and prices.</p>
+        <h2>Try it on your own business</h2>
+        <p class="lead">Tell us your trade and how many people are on your team. We'll set up a free trial with your own services and prices, or walk you through it first if you'd rather see a demo.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Email {{ site.contact_email }}</a>
-          <a class="btn btn-ghost" href="{{ site.url }}/sign-in/">Already a customer? Sign in</a>
+          <a class="btn btn-primary" href="{{ site.trial_url }}">Try it free</a>
+          <a class="btn btn-ghost" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Book a demo</a>
         </div>
       </div>
     </section>
@@ -111,7 +111,7 @@ layout: null
   <footer class="foot">
     <div class="wrap foot-row">
       <span>&copy; {{ site.copyright_year }} {{ site.legal_name }}.</span>
-      <a href="{{ site.url }}/sign-in/">Sign in</a>
+      <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
     </div>
   </footer>
 </body>
