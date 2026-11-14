@@ -1,0 +1,118 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.title }} | {{ site.tagline }}</title>
+  <meta name="description" content="{{ site.description | strip }}">
+  <link rel="canonical" href="{{ site.url }}/">
+  <meta property="og:title" content="{{ site.title }}: {{ site.tagline }}">
+  <meta property="og:description" content="{{ site.description | strip }}">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}/assets/logo.png">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{ site.url }}/" aria-label="{{ site.title }} home">
+        <img src="assets/logo.png" alt="{{ site.title }}" width="130" height="56">
+      </a>
+      <nav class="top-nav">
+        <a href="#features">What it does</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-ghost" href="{{ site.app_url }}">Sign in</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">For home-services trades</p>
+        <h1>{{ site.tagline }}</h1>
+        <p class="lead">
+          Your phone gets answered and the job gets booked on your real calendar.
+          Then you quote it, schedule the crew, invoice it and get paid, all in one place
+          and under your own company's name.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Book a demo</a>
+          <a class="btn btn-ghost" href="#features">See what it does</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="wrap">
+        <h2>Everything between the ringing phone and the paid invoice</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Answers the phone and books the job</h3>
+            <p>An AI agent picks up, asks what's needed and offers times your technicians are actually free. The booking lands on your calendar. The same works in a chat box on your website.</p>
+          </article>
+          <article class="card">
+            <h3>Turns website enquiries into customers</h3>
+            <p>Point your existing contact form at SturdyBiz. Every submission becomes a customer record your office can follow up on, with nothing retyped.</p>
+          </article>
+          <article class="card">
+            <h3>Quotes customers approve in one click</h3>
+            <p>Price from your own rates and materials, send a branded PDF, and remind the customer before it expires. Once it's approved, it becomes a job, with a deposit invoice if you ask for one.</p>
+          </article>
+          <article class="card">
+            <h3>Schedules the crew</h3>
+            <p>Assign a lead and a crew, see who is free, and keep every job tied to a real, map-checked address.</p>
+          </article>
+          <article class="card">
+            <h3>Tracks time, with GPS when you need it</h3>
+            <p>Technicians punch in from their phone, optionally inside a geofence around the job. Overtime follows your province's rules, managers approve, and approved hours export to your payroll provider.</p>
+          </article>
+          <article class="card">
+            <h3>Invoices that get paid</h3>
+            <p>Invoices carry your letterhead and GST/HST number. Customers pay online by card from a link, and you see what's outstanding at a glance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap band-grid">
+        <div>
+          <h2>Your name on everything</h2>
+          <p>Customers see your company, your logo and your colours on every page, email, quote and invoice. They never see ours.</p>
+        </div>
+        <div>
+          <h2>Works with your books</h2>
+          <p>SturdyBiz handles the work and the paperwork. Your accounting and payroll stay where they are: we hand over approved hours and invoices instead of replacing your accountant's tools.</p>
+        </div>
+        <div>
+          <h2>Locked down by default</h2>
+          <p>Technicians and admins sign in with an authenticator app. Time punches can't be edited after the fact, and every administrative action is recorded in a tamper-evident log.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2>See it on your own business</h2>
+        <p class="lead">Tell us your trade and how many people are on your team. We'll walk you through it with your own services and prices.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Email {{ site.contact_email }}</a>
+          <a class="btn btn-ghost" href="{{ site.app_url }}">Already a customer? Sign in</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <span>&copy; {{ site.copyright_year }} {{ site.legal_name }}.</span>
+      <a href="{{ site.app_url }}">Sign in</a>
+    </div>
+  </footer>
+</body>
+</html>

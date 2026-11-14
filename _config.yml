@@ -1,0 +1,25 @@
+# Every value the page links to or names lives here, once. index.html reads
+# them as {{ site.<name> }}; GitHub Pages builds the page with Jekyll on push.
+
+title: SturdyBiz
+tagline: From first call to final invoice.
+description: >-
+  SturdyBiz answers your phone, books the job on your real calendar, quotes it,
+  invoices it and tracks your crew's hours, built for home-services trades.
+
+# Where "Sign in" goes: the application, not this site.
+app_url: https://app.sturdybiz.com
+
+# Where demo requests and questions go. Must be a mailbox that exists on
+# Namecheap Private Email before the site goes live.
+contact_email: hello@sturdybiz.com
+
+# The canonical address of this site (www redirects here; see CNAME).
+url: https://sturdybiz.com
+
+legal_name: SturdyBiz
+copyright_year: 2026
+
+# Jekyll would otherwise publish these.
+exclude:
+  - README.md
