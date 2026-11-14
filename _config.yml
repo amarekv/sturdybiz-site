@@ -11,7 +11,7 @@ description: >-
 app_url: https://app.sturdybiz.com
 
 # Where demo requests and questions go. A mailbox on
-# Namecheap Private Email before the site goes live.
+# Namecheap Private Email.
 contact_email: contact@sturdybiz.com
 
 # The canonical address of this site (www redirects here; see CNAME).
