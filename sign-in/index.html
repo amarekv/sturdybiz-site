@@ -1,0 +1,65 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | {{ site.title }}</title>
+  <meta name="description" content="How to sign in to your company's {{ site.title }} account.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ site.url }}/sign-in/">
+  <link rel="icon" href="{{ site.url }}/assets/logo.png">
+  <link rel="stylesheet" href="{{ site.url }}/assets/site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="{{ site.url }}/" aria-label="{{ site.title }} home">
+        <img src="{{ site.url }}/assets/logo.png" alt="{{ site.title }}" width="130" height="56">
+      </a>
+      <nav class="top-nav">
+        <a href="{{ site.url }}/#features">What it does</a>
+        <a href="{{ site.url }}/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact">
+      <div class="wrap">
+        <h2>Sign in through your company's link</h2>
+        <p class="lead">
+          Every business on {{ site.title }} has its own sign-in address, with its own name and logo.
+          There's no shared sign-in page, so nobody can be sent to the wrong company.
+        </p>
+        <div class="band-grid">
+          <div>
+            <h3 class="card-title">Staff and technicians</h3>
+            <p>Use the link in the welcome email from your employer, or ask your office manager for it.
+              Bookmark it, or add it to your phone's home screen.</p>
+          </div>
+          <div>
+            <h3 class="card-title">Customers</h3>
+            <p>Use the link in your booking confirmation, quote or invoice email,
+              or the sign-in link on your service company's website.</p>
+          </div>
+          <div>
+            <h3 class="card-title">Running a business?</h3>
+            <p>If you'd like {{ site.title }} for your own company, email
+              <a href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">{{ site.contact_email }}</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <span>&copy; {{ site.copyright_year }} {{ site.legal_name }}.</span>
+      <a href="{{ site.url }}/">Home</a>
+    </div>
+  </footer>
+</body>
+</html>

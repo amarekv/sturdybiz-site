@@ -7,8 +7,9 @@ description: >-
   SturdyBiz answers your phone, books the job on your real calendar, quotes it,
   invoices it and tracks your crew's hours, built for home-services trades.
 
-# Where "Sign in" goes: the application, not this site.
-app_url: https://app.sturdybiz.com
+# "Sign in" goes to /sign-in/ on this site, never to the application: the
+# app's own front page names no company (each company has its own address),
+# and redirects back here.
 
 # Where demo requests and questions go. A mailbox on
 # Namecheap Private Email.

@@ -93,3 +93,7 @@ a { color: var(--green); }
   .top-nav a:not(.btn) { display: none; }
   .brand img { width: 104px; }
 }
+
+/* Sign-in page */
+.card-title { margin: 0 0 8px; font-size: 1.15rem; color: var(--green); }
+.contact .band-grid p { margin: 0; color: var(--muted); }
