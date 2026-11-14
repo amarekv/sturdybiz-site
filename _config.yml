@@ -10,9 +10,9 @@ description: >-
 # Where "Sign in" goes: the application, not this site.
 app_url: https://app.sturdybiz.com
 
-# Where demo requests and questions go. Must be a mailbox that exists on
+# Where demo requests and questions go. A mailbox on
 # Namecheap Private Email before the site goes live.
-contact_email: hello@sturdybiz.com
+contact_email: contact@sturdybiz.com
 
 # The canonical address of this site (www redirects here; see CNAME).
 url: https://sturdybiz.com
