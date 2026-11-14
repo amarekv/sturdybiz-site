@@ -7,10 +7,10 @@ description: >-
   SturdyBiz answers your phone, books the job on your real calendar, quotes it,
   invoices it and tracks your crew's hours, built for home-services trades.
 
-# Where "Try it free" goes. Self sign-up is not built yet, so for now it is an
-# email asking for a trial account; when sign-up exists, point this at it.
+# Where "Try it free" goes: self sign-up in the application. Creates a Free
+# company after the person confirms their email.
 # The site has no "Sign in": each company signs in at its own address.
-trial_url: mailto:contact@sturdybiz.com?subject=SturdyBiz%20free%20trial
+trial_url: https://app.sturdybiz.com/signup
 
 # Where demo requests and questions go. A mailbox on
 # Namecheap Private Email.
