@@ -24,3 +24,4 @@ copyright_year: 2026
 # Jekyll would otherwise publish these.
 exclude:
   - README.md
+  - SECURITY.md
