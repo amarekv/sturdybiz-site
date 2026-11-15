@@ -12,6 +12,12 @@ description: >-
 # The site has no "Sign in": each company signs in at its own address.
 trial_url: https://app.sturdybiz.com/signup
 
+# The plans side by side, and the Terms of Service: both pages of the
+# application, built from the same rules the app enforces, so nothing about a
+# plan is restated on this site.
+plans_url: https://app.sturdybiz.com/plans
+terms_url: https://app.sturdybiz.com/terms
+
 # Where demo requests and questions go. A mailbox on
 # Namecheap Private Email.
 contact_email: contact@sturdybiz.com
