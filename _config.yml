@@ -22,6 +22,15 @@ terms_url: https://app.sturdybiz.com/terms
 # Namecheap Private Email.
 contact_email: contact@sturdybiz.com
 
+# The contact form posts to SturdyBiz's own web-form intake, as a customer's
+# website would: each message becomes a customer in the SturdyBiz company in
+# the app, and the addresses set under Tenant Admin > Web Form Integration are
+# emailed. The key is generated on that screen (header key, not URL). It is
+# meant to sit in a public page -- it can only file an enquiry -- and is
+# revoked there if abused. Empty: the form is not shown, only the email link.
+enquiry_url: https://app.sturdybiz.com/api/enquiries
+enquiry_key: ""
+
 # The canonical address of this site (www redirects here; see CNAME).
 url: https://sturdybiz.com
 

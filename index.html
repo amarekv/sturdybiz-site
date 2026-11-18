@@ -105,6 +105,62 @@ layout: null
           <a class="btn btn-primary" href="{{ site.trial_url }}">Try it free</a>
           <a class="btn btn-ghost" href="mailto:{{ site.contact_email }}?subject=SturdyBiz%20demo">Book a demo</a>
         </div>
+        {% if site.enquiry_key != "" %}
+        <form id="contact-form" class="contact-form" novalidate>
+          <h3>Or send us a message</h3>
+          <div class="form-grid">
+            <label>Your name<input name="name" type="text" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+            <label>Phone <span class="opt">(optional)</span><input name="phone" type="tel" autocomplete="tel"></label>
+            <label>Business name <span class="opt">(optional)</span><input name="company" type="text" autocomplete="organization"></label>
+            <label>Trade <span class="opt">(optional)</span><input name="trade" type="text" placeholder="e.g. Plumbing, HVAC"></label>
+            <label>People on your team <span class="opt">(optional)</span><input name="team_size" type="text" inputmode="numeric"></label>
+          </div>
+          <label>How can we help?<textarea name="message" rows="4" required></textarea></label>
+          <!-- Left empty by people, who never see it; filled by bots. -->
+          <div class="trap" aria-hidden="true"><label>Website<input name="sb_website" type="text" tabindex="-1" autocomplete="off"></label></div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <script>
+          (function () {
+            var form = document.getElementById("contact-form");
+            var status = form.querySelector(".form-status");
+            var fallback = "Something went wrong. Please email us at {{ site.contact_email }}.";
+            form.addEventListener("submit", function (event) {
+              event.preventDefault();
+              if (!form.checkValidity()) {
+                status.textContent = "Please fill in your name, email and message.";
+                form.reportValidity();
+                return;
+              }
+              var body = { source: "sturdybiz.com contact form" };
+              new FormData(form).forEach(function (value, key) { body[key] = String(value).trim(); });
+              var button = form.querySelector("button");
+              button.disabled = true;
+              status.textContent = "Sending…";
+              fetch({{ site.enquiry_url | jsonify }}, {
+                method: "POST",
+                headers: { "Content-Type": "application/json", "X-SturdyBiz-Key": {{ site.enquiry_key | jsonify }} },
+                body: JSON.stringify(body)
+              }).then(function (response) {
+                return response.json().catch(function () { return {}; }).then(function (data) {
+                  if (response.ok) {
+                    form.reset();
+                    status.textContent = "Thanks. We'll be in touch soon.";
+                  } else {
+                    status.textContent = (response.status === 422 && data.error) ? data.error : fallback;
+                    button.disabled = false;
+                  }
+                });
+              }).catch(function () {
+                status.textContent = fallback;
+                button.disabled = false;
+              });
+            });
+          })();
+        </script>
+        {% endif %}
       </div>
     </section>
   </main>
